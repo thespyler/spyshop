@@ -9,16 +9,27 @@
 <body>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	{% block content %}
-	<h1>Spyler Store - Get Anything you want</h1>
-	
+	<style type="text/css">
+	h2{
+		padding: 10px;
+		background-color: black;
+		color: white;
+		border: 5px white purple;
+		margin: auto;
+		line-height: 1.6em;
+		display: block;
+	}</style>
+	<h2>Spyler Store - Get Anything you want</h2>
+		
 
 	<div class="harry1" align="">
 		Harry Potter and the philosophers stone <br>
 		<img src="{%static 'harry1.jpeg'%}">
-		<img src="{%static 'cart.png'%}" width="5%" height="5%">
-		<a href="add/">Add to cart<br></a>
+		<!-- <img src="{%static 'cart.png'%}" width="5%" height="5%"> -->
+		<br><a href="add/">Add to cart<br></a>
 		<!-- price - 4$ -->
 		<a href="buy/">buy</a>
+		<a href="">details</a>
 		price 3$
 	</div>
 
@@ -27,11 +38,13 @@
 		<!-- by jk rowling -->
 		<img src="{%static 'harry2.jpeg'%}">
 		<!-- price - 4$ -->
-		<img src="{%static 'cart.png'%}" width="5%" height="5%">
+		<!-- <img src="{%static 'cart.png'%}" width="5%" height="5%"> -->
+		<br>
 		<a href="add/">Add to cart<br></a>
 
 		<a href="buy/">buy</a>
 		price 3$
+		<a href="">details</a>
 
 	</div>
 
@@ -39,11 +52,12 @@
 		Harry Potter and the Prizoner of Azkaban <br>
 		<img src="{%static 'harry3.jpeg'%}">
 		<!-- price - 4$ -->
-		<img src="{%static 'cart.png'%}" width="5%" height="5%">
-		<a href="add/">Add to cart<br></a>
+		<!-- <img src="{%static 'cart.png'%}" width="5%" height="5%"> -->
+		<br><a href="add/">Add to cart<br></a>
 
 		<a href="buy/">buy</a>
 		price 4$
+		<a href="">details</a>
 
 	</div>
 
@@ -51,11 +65,12 @@
 		Harry Potter and the Goblet of Fire<br>
 		<img src="{%static 'harry4.jpeg'%}">
 		<!-- price - 4$ -->
-		<img src="{%static 'cart.png'%}" width="5%" height="5%">
-		<a href="add/">Add to cart<br></a>
+		<!-- <img src="{%static 'cart.png'%}" width="5%" height="5%"> -->
+		<br><a href="add/">Add to cart<br></a>
 
 		<a href="buy/">buy</a>
 		price 6$
+		<a href="">details</a>
 
 	</div>
 	{% endblock %}
