@@ -1,0 +1,32 @@
+body{
+	/*background-color: black;*/
+}
+
+div{
+	background-color: black;
+	/*font-style: bold;*/
+/*font-family: cursive;*/
+	color: white;
+	font-size: 1.6em;
+	border: 5px skyblue solid;
+	padding: 10px;
+	margin: 10px;
+	width: 30%;
+	box-sizing: border-box;
+	float: left;
+
+}
+
+img{
+	border: 2px red solid;
+
+}
+
+a{
+	color: yellow;
+}
+
+input[type="submit"]{
+	color: white;
+	background-color: black;
+}

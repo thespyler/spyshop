@@ -1,0 +1,38 @@
+body{
+	background-color: #fff;
+}
+
+div{
+	background-color: black;
+
+	color: white;
+	font-size: 1.6em;
+	border: 5px skyblue solid;
+	padding: 10px;
+	margin: 10px;
+	width: 30%;
+	box-sizing: border-box;
+	float: left;
+
+}
+
+img{
+	border: 2px red solid;
+	size: auto;
+
+}
+
+a{
+	color: white;
+	text-decoration: none;
+
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+h1{
+	color: red;
+	font-family: sans-serif;
+}
