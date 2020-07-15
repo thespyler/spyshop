@@ -29,18 +29,18 @@ def check(request):
 	# is sent successfuly render the template to enter the correct otp
 
 	mail = request.POST['email']
-	try:
-		otp  = randrange(1000, 9999)
-		send_mail('otp for spyler mart',
-				 f'Hey, {name} your otp is {otp}, enjoy!',
-				 'abhilashtalankar@gmail.com',
-				 [mail],
-				 fail_silently=False
-		)
-		return render(request, 'give.html', {'OTP': otp, 'name': name})
+# try:
+	otp  = randrange(1000, 9999)
+	send_mail('otp for spyler mart',
+			 f'Hey, spyler your otp is {otp}, enjoy!',
+			 'abhilashtalankar@gmail.com',
+			 [mail],
+			 fail_silently=False
+	)
+	return render(request, 'give.html', {'OTP': otp})
 
-	except:
-		return HttpResponse("Sorry, Wrong email")
+	# except:
+	# 	return HttpResponse("Sorry, Wrong email")
 
 
 def join(request):
@@ -63,11 +63,10 @@ def start_page_log(request):
 
 	name = request.POST['nm']
 	password = request.POST['pass']
-	
-	for i in User.objects.all():
-		if i.name == name:
-			if i.password == password:
+
+	for i in range(1, len(User.objects.all())+1):
+		if User.objects.get(id=i).name == name:
+			if User.objects.get(id=i).password == password:
 				return HttpResponseRedirect('/shop/')
 
-		else:
-			return HttpResponse("Wrong Username or Password")
+	return HttpResponse("Wrong email or password")
