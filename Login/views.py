@@ -60,6 +60,7 @@ def start_page_log(request):
 
 	name = request.POST['nm']
 	password = request.POST['pass']
+	
 	for i in User.objects.all():
 		if i.name == name:
 			if i.password == password:
