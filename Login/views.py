@@ -29,15 +29,18 @@ def check(request):
 	# is sent successfuly render the template to enter the correct otp
 
 	mail = request.POST['email']
-	name = request.POST['nm']
-	otp  = randrange(1000, 9999)
-	send_mail('otp for spyler mart',
-			 f'Hey, {name} your otp is {otp}, enjoy!',
-			 'abhilashtalankar@gmail.com',
-			 [mail],
-			 fail_silently=False
-	)
-	return render(request, 'give.html', {'OTP': otp, 'name': name})
+	try:
+		otp  = randrange(1000, 9999)
+		send_mail('otp for spyler mart',
+				 f'Hey, {name} your otp is {otp}, enjoy!',
+				 'abhilashtalankar@gmail.com',
+				 [mail],
+				 fail_silently=False
+		)
+		return render(request, 'give.html', {'OTP': otp, 'name': name})
+
+	except:
+		return HttpResponse("Sorry, Wrong email")
 
 
 def join(request):

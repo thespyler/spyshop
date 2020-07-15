@@ -7,7 +7,7 @@ body{
 }
 
 .login{
-	background-color: #f77;
+	background-color: purple;
 	padding: 5px;
 	line-height: 3em;
 	margin: 1em;
@@ -24,7 +24,22 @@ body{
 }
 
 input[type="text"]{
-	width: 60%
+	width: 60%;
+	margin: auto;
+}
+
+input:hover{
+	color: white;
+	background-color: black;
+	font-size: 0.7em;
+}
+
+input[type="submit"]{
+	background-color: black;
+	color: white;
+	margin: auto;
+	padding: 10px;
+	border:  1px magenta solid;
 }
 input[type="password"]{
 	width: 60%
