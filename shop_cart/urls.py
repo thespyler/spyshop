@@ -25,5 +25,7 @@ urlpatterns = [
     path('', login),
     path('signup/', check),
     path('check/<int:otp>/', wake),
-    path('join/', join)
+    path('join/', join),
+    path('login/', start_page_log),
+    path('shop/', main)
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

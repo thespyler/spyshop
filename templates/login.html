@@ -4,9 +4,12 @@
 	<title>Login</title>
 </head>
 <body>
+	<form action="/login/" method="post">{% csrf_token %}
+		Username: <input type="text" name="nm"><br>
+		Password: <input type="Password" name="pass"><br><input type="submit" value="Login">
+	</form>
 	<form action="signup/" method="post">{% csrf_token %}
-			Username: <input type="text" name="nm"><br>
-			Password: <input type="Password" name="pass"><br><input type="submit" value="Login">
+			
 			if you don't have a account just type your email and not Username or Password
 			Email: <input type="text" name="email"><br>
 			
