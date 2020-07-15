@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Otp</title>
+</head>
+<body>
+	{% block content %}
+	<form action="/check/{{OTP}}/" method="post">{% csrf_token %}
+		Write your otp here : <input type="number" name="otp">
+		<input type="submit" value="Give">
+	</form>
+
+	{% endblock %}
+
+</body>
+</html>

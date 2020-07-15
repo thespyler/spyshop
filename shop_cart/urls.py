@@ -16,10 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Manager.views import *
+from Login.views import *
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', main)
+    path('', login),
+    path('signup/', check),
+    path('check/<int:otp>/', wake),
+    path('join/', join)
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

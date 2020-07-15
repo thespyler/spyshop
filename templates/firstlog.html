@@ -1,0 +1,7 @@
+Congragulations, you signed up! Just Enter your name and password to get started
+
+<form action="/join/" method="post">{% csrf_token %}
+Username: <input type="text" name="nm"><br>
+Password: <input type="Password" name="pass"><br><input type="submit" value="Login">
+<input type="submit" value="Join">
+</form>
